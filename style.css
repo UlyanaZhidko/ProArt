@@ -4,6 +4,7 @@
     --main-color-2: #fff;
     --main-color-3: #E60B0B;
     --main-color-4: #448CFB;
+    --main-color-5: #FCBC05;
 }
 
 html,
@@ -295,12 +296,41 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.download__block__link:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
 }
 
 .download__block__link-img {
     margin-right: 25px;
 }
 
-.download_google {
+.download-google {
     margin-bottom: 42px;
+}
+
+.circle-img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 1220px;
+    top: 2990px;
+    background: var(--main-color-5);
+    border-radius: 100px;
+    z-index: -1;
 }
