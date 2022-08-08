@@ -12,6 +12,23 @@ body {
     box-sizing: border-box;
 }
 
+.main-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    color: var(--main-color-1);
+}
+
+.main-desc {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-color-1);
+    margin: 0;
+}
+
 .header {
     background-image: url(img/MAIN.png);
     background-repeat: no-repeat;
@@ -148,12 +165,7 @@ body {
 
 /* ----- advantage ------*/
 .advantage__title {
-    font-family: var(--main-font);
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 55px;
     text-align: center;
-    color: var(--main-color-1);
     margin: 90px auto;
 }
 
@@ -212,11 +224,6 @@ body {
 }
 
 .advantage__card-desc {
-    font-family: var(--main-font);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--main-color-1);
     margin: 8px 0 0;
 }
 
@@ -244,23 +251,56 @@ body {
 
 }
 
-.courses-banner__bloc-text {
+.courses-banner__block-text {
     max-width: 573px;
     margin: 0 auto;
 }
 
 .courses-banner__block__title {
-    font-family: var(--main-font);
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 100%;
-    color: var(--main-color-1);
+    line-height: 40px;
 }
 
-.courses-banner__block__desc {
+/* ----- download ------ */
+.download {
+    margin-top: 250px;
+}
+
+.download__block-text {
+    text-align: center;
+    max-width: 1028px;
+    margin: 0 auto;
+}
+
+.download__block {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.download__block__buttons {
+    max-width: 452px;
+}
+
+.download__block__link {
+    padding: 0px 50px 0;
+    height: 90px;
+    border-radius: 15px;
+    background: var(--main-color-3);
+    color: var(--main-color-2);
     font-family: var(--main-font);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--main-color-1);
+    font-size: 24px;
+    line-height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.download__block__link-img {
+    margin-right: 25px;
+}
+
+.download_google {
+    margin-bottom: 42px;
 }
