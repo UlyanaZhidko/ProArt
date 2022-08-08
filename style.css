@@ -3,7 +3,7 @@
     --main-color-1: #000;
     --main-color-2: #fff;
     --main-color-3: #E60B0B;
-
+    --main-color-4: #448CFB;
 }
 
 html,
@@ -218,4 +218,49 @@ body {
     line-height: 22px;
     color: var(--main-color-1);
     margin: 8px 0 0;
+}
+
+/* ----- courses-banner ----- */
+.courses-banner {
+    height: 400px;
+    background: var(--main-color-4);
+    display: flex;
+    align-items: center;
+    margin-top: 230px;
+}
+
+.courses-banner__block {
+    width: 741px;
+    height: 400px;
+    background: var(--main-color-2);
+    margin: 0 0 0 100px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+}
+
+.courses-banner__block-img {
+    margin-top: 145px;
+
+}
+
+.courses-banner__bloc-text {
+    max-width: 573px;
+    margin: 0 auto;
+}
+
+.courses-banner__block__title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    color: var(--main-color-1);
+}
+
+.courses-banner__block__desc {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-color-1);
 }
