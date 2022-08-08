@@ -368,3 +368,80 @@ body {
 .lessons-banner__block__title {
     line-height: 40px;
 }
+
+
+/* ------ reviews ------ */
+.reviews {
+    width: 1109px;
+    height: 493px;
+    margin: 290px auto 152px;
+    background: var(--main-color-2);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.16);
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(img/triangle.svg);
+    background-repeat: no-repeat;
+    background-position: 107% 146%;
+}
+
+.reviews-right__block {
+    display: flex;
+    align-items: baseline;
+}
+
+.reviews-right__avatar {
+    width: 139px;
+    height: 139px;
+    border-radius: 8px;
+    margin: 40px 20px 0 0;
+}
+
+.reviews-right__desc {
+    max-width: 464px;
+}
+
+.author-name {
+    color: var(--main-color-3);
+}
+
+.reviews-left {
+    max-width: 298px;
+}
+
+.reviews__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider-btn {
+    width: 52px;
+    height: 52px;
+    background: var(--main-color-3);
+    border-radius: 4px;
+}
+
+.slider-btn-left {
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--main-color-3);
+    background-color: transparent;
+    font-size: 20px;
+    color: var(--main-color-3);
+    text-decoration: none;
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-btn-right {
+    color: var(--main-color-2);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: var(--main-font);
+    text-align: center;
+}
