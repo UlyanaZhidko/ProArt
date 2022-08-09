@@ -519,3 +519,16 @@ body {
         opacity: 1
     }
 }
+
+
+/* ------ promo-widget ------ */
+
+.promo-widget {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.promo-widget__desc {
+    max-width: 430px;
+    margin: 0 auto;
+}
