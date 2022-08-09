@@ -11,6 +11,7 @@ html,
 body {
     margin: 0 auto;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .main-title {
@@ -65,7 +66,6 @@ body {
     align-items: flex-start;
 }
 
-
 .btn-long {
     font-family: var(--main-font);
     font-weight: 700;
@@ -76,6 +76,7 @@ body {
     border-radius: 20px;
     border: 2px solid var(--main-color-3);
     outline: none;
+    text-decoration: none;
     padding: 12px 93px;
     margin-top: 52px;
     cursor: pointer;
@@ -165,6 +166,7 @@ body {
 
 
 /* ----- advantage ------*/
+
 .advantage__title {
     text-align: center;
     margin: 90px auto;
@@ -177,7 +179,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 
 .advantage__card {
     display: flex;
@@ -228,7 +229,9 @@ body {
     margin: 8px 0 0;
 }
 
+
 /* ----- courses-banner ----- */
+
 .courses-banner {
     height: 400px;
     background: var(--main-color-4);
@@ -249,7 +252,6 @@ body {
 
 .courses-banner__block-img {
     margin-top: 145px;
-
 }
 
 .courses-banner__block-text {
@@ -261,7 +263,9 @@ body {
     line-height: 40px;
 }
 
+
 /* ----- download ------ */
+
 .download {
     margin-top: 250px;
 }
@@ -335,6 +339,7 @@ body {
     z-index: -1;
 }
 
+
 /* ------ lessons-banner ------ */
 
 .lessons-banner {
@@ -357,7 +362,6 @@ body {
 
 .lessons-banner__block-img {
     margin-top: 145px;
-
 }
 
 .lessons-banner__block-text {
@@ -371,10 +375,28 @@ body {
 
 
 /* ------ reviews ------ */
-.reviews {
+
+.reviews__circle-img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -207px;
+    top: 0;
+    background: var(--main-color-5);
+    border-radius: 100px;
+    z-index: -1;
+}
+
+.slider {
+    position: relative;
+    margin: 290px 150px;
+    height: 300px;
+}
+
+.reviews-block {
     width: 1109px;
     height: 493px;
-    margin: 290px auto 152px;
+    margin: 0 auto;
     background: var(--main-color-2);
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.16);
     border-radius: 24px;
@@ -401,6 +423,7 @@ body {
 
 .reviews-right__desc {
     max-width: 464px;
+    height: 100px;
 }
 
 .author-name {
@@ -413,17 +436,22 @@ body {
 
 .reviews__btn {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    left: 28%;
+    bottom: -30%;
+    position: absolute;
 }
 
 .slider-btn {
-    width: 52px;
-    height: 52px;
-    background: var(--main-color-3);
     border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--main-font);
+    text-decoration: none;
 }
 
-.slider-btn-left {
+.previous {
     margin-right: 12px;
     width: 40px;
     height: 40px;
@@ -431,17 +459,63 @@ body {
     background-color: transparent;
     font-size: 20px;
     color: var(--main-color-3);
-    text-decoration: none;
-    font-family: var(--main-font);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
 }
 
-.slider-btn-right {
+.previous:hover {
+    background: var(--main-color-3);
     color: var(--main-color-2);
-    text-decoration: none;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.next {
+    background: var(--main-color-3);
+    width: 52px;
+    height: 52px;
+    color: var(--main-color-2);
     font-size: 30px;
-    font-family: var(--main-font);
     text-align: center;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.next:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
 }

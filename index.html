@@ -10,8 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -38,7 +37,7 @@
 
         <div class="header-title">
             <img src="img/main-text.svg" alt="Искусство это интересно">
-            <button class="btn-long">Скачать приложение</button>
+            <a class="btn-long" href="#download">Скачать приложение</a>
         </div>
 
     </div>
@@ -61,8 +60,7 @@
 
                 <div class="advantage__card-text">
                     <h3 class="advantage__card-title">Это эффективно</h3>
-                    <p class="advantage__card-desc main-desc">Наши курсы эффективны для изучения. Ознакомьтесь с нашими
-                        свежими исследованиями!</p>
+                    <p class="advantage__card-desc main-desc">Наши курсы эффективны для изучения. Ознакомьтесь с нашими свежими исследованиями!</p>
                 </div>
             </div>
 
@@ -73,9 +71,7 @@
 
                 <div class="advantage__card-text">
                     <h3 class="advantage__card-title">Это классно</h3>
-                    <p class="advantage__card-desc main-desc">Доступ к оценкам и решениям своих студентов в любых
-                        открытых курсах.
-                        Собирайте свой класс вместе!</p>
+                    <p class="advantage__card-desc main-desc">Доступ к оценкам и решениям своих студентов в любых открытых курсах. Собирайте свой класс вместе!</p>
                 </div>
             </div>
 
@@ -86,8 +82,7 @@
 
                 <div class="advantage__card-text">
                     <h3 class="advantage__card-title">Это увлекательно</h3>
-                    <p class="advantage__card-desc main-desc">Выполняйте практические задания, получайте обратную связь
-                        и закрепляйте знания.</p>
+                    <p class="advantage__card-desc main-desc">Выполняйте практические задания, получайте обратную связь и закрепляйте знания.</p>
                 </div>
             </div>
 
@@ -98,8 +93,8 @@
 
                 <div class="advantage__card-text">
                     <h3 class="advantage__card-title">Это нескучно</h3>
-                    <p class="advantage__card-desc main-desc">С нашим игровым подходом занятия будут достовлять
-                        удовольствие.</p>
+                    <p class="advantage__card-desc main-desc">С нашим игровым подходом занятия будут достовлять удовольствие.
+                    </p>
                 </div>
             </div>
         </div>
@@ -111,8 +106,7 @@
                 <h2 class="courses-banner__block__title main-title">Онлайн-курсы для изучения авангардного искусства
                 </h2>
                 <p class="courses-banner__block__desc main-desc">
-                    Получайте балы за правильные ответы и пройденные тесты, открывайте новые материалы и интересные
-                    игры. Наши короткие уроки действительно работают, и мы можем это доказать.
+                    Получайте балы за правильные ответы и пройденные тесты, открывайте новые материалы и интересные игры. Наши короткие уроки действительно работают, и мы можем это доказать.
                 </p>
             </div>
         </div>
@@ -127,12 +121,11 @@
             <p class="download__desc main-desc">
                 Проводите перерывы или время в пути с пользой с нашими приложениями для iPhone и Android.
             </p>
-            <p class="download__desc main-desc"> Загрузите их, и вы поймёте, почему мы получили от Apple и Google самые
-                лестные отзывы.
+            <p class="download__desc main-desc"> Загрузите их, и вы поймёте, почему мы получили от Apple и Google самые лестные отзывы.
             </p>
         </div>
 
-        <div class="download__block">
+        <div class="download__block" id="download">
             <img class="download__block-img" src="img/download_img.png" alt="картинка">
 
             <div class="download__block__buttons">
@@ -163,39 +156,73 @@
             <div class="lessons-banner__block-text">
                 <h2 class="lessons-banner__block__title main-title">ПроАрт для уроков!</h2>
                 <p class="lessons-banner__block__desc main-desc">
-                    Бесплатный инструмент для преподавателей истории искусств.
-                    Используйте ГуруАрт для обучения в классе и дома.
+                    Бесплатный инструмент для преподавателей истории искусств. Используйте ПроАрт для обучения в классе и дома.
                 </p>
                 <button class="btn-long">Скачать приложение</button>
             </div>
         </div>
     </section>
 
-    <section class="reviews">
-        <div class="reviews-left">
-            <h2 class="reviews__title main-title">Люди, которые уже попробовали!</h2>
-            <div class="reviews__btn">
-                <a href="#" class="slider-btn slider-btn-left">←</a>
-                <a href="#" class="slider-btn slider-btn-right">→</a>
-            </div>
-        </div>
+    <section class="reviews slider">
+        <div class="reviews__circle-img"></div>
 
-        <div class="reviews-right">
-            <div class="reviews-right__block">
-                <img class="reviews-right__img" src="img/quote.svg" alt="кавычки">
-                <div class="reviews-right__text">
-                    <p class="reviews-right__desc main-desc">
-                        Отличные курсы, лучшие из всех, что я когда-либо проходил. С <b>ПроАрт</b> я познакомился в
-                        университете, где онлайн-задания довольно успешно внедрялись преподавателями в учебный план.
-                    </p>
-                    <div class="reviews-right__author">
-                        <img class="reviews-right__avatar" src="img/review-1.jpg" alt="фото пользователя">
-                        <span class="author-name main-desc">— Колов Николай</span>
+        <div class="item">
+            <div class="reviews-block">
+                <div class="reviews-left">
+                    <h2 class="reviews__title main-title">Люди, которые уже попробовали!</h2>
+                </div>
+
+                <div class="reviews-right">
+                    <div class="reviews-right__block">
+                        <img class="reviews-right__img" src="img/quote.svg" alt="кавычки">
+                        <div class="reviews-right__text">
+                            <p class="reviews-right__desc main-desc">
+                                Отличные курсы, лучшие из всех, что я когда-либо проходил. С <b>ПроАрт</b> я познакомился в университете, где онлайн-задания довольно успешно внедрялись преподавателями в учебный план.
+                            </p>
+                            <div class="reviews-right__author">
+                                <img class="reviews-right__avatar" src="img/review-1.jpg" alt="фото пользователя">
+                                <span class="author-name main-desc">— Колов Николай</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="item">
+            <div class="reviews-block">
+                <div class="reviews-left">
+                    <h2 class="reviews__title main-title">Люди, которые уже попробовали!</h2>
+                </div>
+
+                <div class="reviews-right">
+                    <div class="reviews-right__block">
+                        <img class="reviews-right__img" src="img/quote.svg" alt="кавычки">
+                        <div class="reviews-right__text">
+                            <p class="reviews-right__desc main-desc">
+                                Очень удобно и интересно проходить уроки. В любое удобное время можно зайти и продолжить изучения. Очень понравился курс "Супрематизм"
+                            </p>
+                            <div class="reviews-right__author">
+                                <img class="reviews-right__avatar" src="img/review-2.jpg" alt="фото пользователя">
+                                <span class="author-name main-desc">— Ольга Муровва</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews__btn">
+            <a class="slider-btn previous" onclick="previousSlide()">←</a>
+            <a class="slider-btn next" onclick="nextSlide()">→</a>
+        </div>
     </section>
+
+
+
+
+
+    <script src="reviewSlider.js"></script>
 </body>
 
 </html>
