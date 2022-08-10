@@ -676,6 +676,9 @@ body {
     .btn-long {
         padding: 12px;
     }
+    .advantage__block {
+        width: auto;
+    }
 }
 
 @media(max-width: 600px) {
@@ -732,5 +735,27 @@ body {
         font-size: 15px;
         line-height: 20px;
         padding: 8px 16px;
+    }
+    .main-title {
+        font-size: 25px;
+    }
+    .advantage__card-title {
+        font-size: 18px;
+        line-height: 19px;
+    }
+    .advantage__title {
+        margin: 45px 0 20px;
+    }
+    .advantage__card-square {
+        margin-right: 15px;
+    }
+    .advantage__block {
+        flex-direction: column;
+    }
+    .advantage__card {
+        margin-bottom: 25px;
+    }
+    .advantage__card-text {
+        max-width: 185px;
     }
 }
