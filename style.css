@@ -679,6 +679,25 @@ body {
     .advantage__block {
         width: auto;
     }
+    .courses-banner {
+        margin: 0;
+    }
+    .courses-banner__block {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+    .courses-banner__block__title {
+        font-size: 30px;
+        line-height: 32px;
+        width: 350px;
+    }
+    .courses-banner__img {
+        width: 300px;
+        margin-left: -40px;
+    }
+    .courses-banner__block-img {
+        margin: auto;
+    }
 }
 
 @media(max-width: 600px) {
@@ -738,6 +757,7 @@ body {
     }
     .main-title {
         font-size: 25px;
+        line-height: 27px;
     }
     .advantage__card-title {
         font-size: 18px;
@@ -757,5 +777,31 @@ body {
     }
     .advantage__card-text {
         max-width: 185px;
+    }
+    .courses-banner {
+        margin-top: 60px;
+        height: 480px;
+    }
+    .courses-banner__block {
+        margin: 0;
+        padding: 0 100px 0 10px;
+        height: 315px;
+    }
+    .courses-banner__block-text {
+        width: 204px;
+    }
+    .courses-banner__block-img {
+        margin-top: 145px;
+        margin-left: -160px;
+    }
+    .courses-banner__img {
+        height: 379px;
+        margin-top: 85px;
+    }
+    .courses-banner__block__title {
+        width: 300px;
+    }
+    .courses-banner__block__desc {
+        width: 170px;
     }
 }
