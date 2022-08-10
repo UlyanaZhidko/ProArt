@@ -44,8 +44,15 @@ body {
     padding-top: 60px;
 }
 
-.header-logo {
+.header-logo a {
     margin: 0 125px 0 85px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-color-3);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .main-nav__link {
@@ -377,14 +384,8 @@ body {
 /* ------ reviews ------ */
 
 .reviews__circle-img {
-    position: absolute;
-    width: 150px;
-    height: 150px;
     right: -207px;
     top: 0;
-    background: var(--main-color-5);
-    border-radius: 100px;
-    z-index: -1;
 }
 
 .slider {
@@ -641,4 +642,95 @@ body {
     margin: 0;
     padding: 80px 0 30px;
     text-align: center;
+}
+
+
+/* ------------------------- ADAPTIVE ----------------------- */
+
+@media(max-width: 1340px) {
+    .circle-img {
+        display: none;
+    }
+}
+
+@media (max-width: 1340px) {
+    .header {
+        height: 600px;
+    }
+    .header-menu {
+        padding-top: 15px;
+    }
+    .main-card {
+        margin: 20px auto;
+        width: 90%;
+    }
+    .header-title {
+        margin: 58px 0 0 25px;
+    }
+    .header-logo a {
+        margin: 0 70px 0 25px;
+    }
+    .header-logo-img {
+        height: 95px;
+    }
+    .btn-long {
+        padding: 12px;
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        width: 86%;
+        margin: 0 auto;
+    }
+    .header {
+        background-image: url(img/main-mob.png);
+        height: 690px;
+    }
+    .header-menu {
+        padding-top: 26px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-logo a {
+        font-size: 30px;
+        line-height: 41px;
+        margin: 0;
+    }
+    .header-title {
+        margin: 660px 0;
+    }
+    .header-logo-img {
+        height: 70px;
+    }
+    .btn-long {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+    .main-card {
+        margin: 222px auto 0;
+        width: 90%;
+        height: auto;
+    }
+    .main-card-title {
+        font-size: 22px;
+        line-height: 25px;
+        margin: 30px 30px 0;
+    }
+    .main-desc {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .main-card-desc {
+        margin: 15px 30px 0;
+        text-align: center;
+    }
+    .btn-small {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 8px 16px;
+    }
 }
