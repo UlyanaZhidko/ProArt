@@ -347,7 +347,7 @@ body {
     background: var(--main-color-5);
     display: flex;
     align-items: center;
-    margin-top: 230px;
+    margin: 490px 0 290px;
 }
 
 .lessons-banner__block {
@@ -389,7 +389,7 @@ body {
 
 .slider {
     position: relative;
-    margin: 290px 150px;
+    margin: 100px 150px;
     height: 300px;
 }
 
@@ -524,7 +524,7 @@ body {
 /* ------ promo-widget ------ */
 
 .promo-widget {
-    margin: 0 auto;
+    margin: 0 auto 118px;
     text-align: center;
 }
 
