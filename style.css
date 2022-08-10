@@ -698,6 +698,9 @@ body {
     .courses-banner__block-img {
         margin: auto;
     }
+    .download__block {
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 600px) {
@@ -799,5 +802,26 @@ body {
     }
     .courses-banner__block__desc {
         width: 170px;
+    }
+    .download__block-text {
+        width: 85%;
+    }
+    .download {
+        margin-top: 60px;
+    }
+    .download__block-img {
+        width: 100%;
+    }
+    .download__block__link {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .download__block__link-img {
+        width: 17%;
+        margin-right: 15px;
+    }
+    .download__block__link {
+        padding: 0px 26px 0;
+        height: 60px;
     }
 }
