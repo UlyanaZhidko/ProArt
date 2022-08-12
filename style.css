@@ -701,6 +701,13 @@ body {
     .download__block {
         flex-direction: column;
     }
+    .slider {
+        margin: 0;
+    }
+    .reviews-block {
+        width: 95%;
+        margin-top: 80px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -862,5 +869,6 @@ body {
     .reviews-right__block {
         display: flex;
         align-items: center;
+        padding: 0 10px;
     }
 }
