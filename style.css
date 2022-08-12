@@ -709,7 +709,7 @@ body {
         margin-top: 80px;
     }
     .lessons-banner {
-        margin: 250px 0;
+        margin: 200px 0 50px;
     }
     .lessons-banner__block {
         margin: 0 20px;
@@ -892,7 +892,6 @@ body {
         padding: 0 10px;
     }
     .lessons-banner {
-        margin-top: 200px;
         height: 480px;
     }
     .lessons-banner__block {
@@ -916,5 +915,8 @@ body {
     .lessons-banner__block-img {
         margin-top: 200px;
         z-index: 99;
+    }
+    .promo-widget {
+        margin: 0 auto 20px;
     }
 }
