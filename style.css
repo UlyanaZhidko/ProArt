@@ -708,6 +708,27 @@ body {
         width: 95%;
         margin-top: 80px;
     }
+    .lessons-banner {
+        margin: 250px 0;
+    }
+    .lessons-banner__block {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+    .lessons-banner__block__title {
+        font-size: 30px;
+        line-height: 32px;
+        width: 350px;
+    }
+    .lessons-banner__img {
+        width: 300px;
+        margin-left: -40px;
+        z-index: 99;
+    }
+    .lessons-banner__block-img {
+        margin-top: 200px;
+        z-index: 99;
+    }
 }
 
 @media(max-width: 600px) {
@@ -870,5 +891,25 @@ body {
         display: flex;
         align-items: center;
         padding: 0 10px;
+    }
+    .lessons-banner {
+        margin-top: 200px;
+        height: 480px;
+    }
+    .lessons-banner__block {
+        height: 315px;
+        margin: 0 0 0 -185px;
+    }
+    .lessons-banner__block__desc {
+        margin: 0px 95px;
+    }
+    .lessons-banner__block__title {
+        margin: 0 0 70px 0;
+    }
+    .lessons-banner__img {
+        width: 270px;
+    }
+    .lessons-banner .btn-long {
+        margin-left: 85px;
     }
 }
