@@ -722,11 +722,10 @@ body {
     }
     .lessons-banner__img {
         width: 300px;
-        margin-left: -40px;
         z-index: 99;
     }
     .lessons-banner__block-img {
-        margin-top: 200px;
+        margin-top: auto;
         z-index: 99;
     }
 }
@@ -901,15 +900,21 @@ body {
         margin: 0 0 0 -185px;
     }
     .lessons-banner__block__desc {
-        margin: 0px 95px;
+        margin: 0 0 0 90px;
+        width: auto;
     }
     .lessons-banner__block__title {
         margin: 0 0 70px 0;
     }
     .lessons-banner__img {
         width: 270px;
+        margin-left: -40px;
     }
     .lessons-banner .btn-long {
         margin-left: 85px;
+    }
+    .lessons-banner__block-img {
+        margin-top: 200px;
+        z-index: 99;
     }
 }
