@@ -728,6 +728,32 @@ body {
         margin-top: auto;
         z-index: 99;
     }
+    .footer-container {
+        width: 90%;
+        padding-top: 30px;
+        flex-direction: column-reverse;
+    }
+    .footer__items__wrap {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .footer-social {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .item-name {
+        margin-bottom: 20px;
+    }
+    .footer__item {
+        margin-bottom: 50px;
+    }
+    .item-link {
+        font-size: 14px;
+    }
+    .copyright-text {
+        font-size: 12px;
+        padding: 0 0 30px;
+    }
 }
 
 @media(max-width: 600px) {
