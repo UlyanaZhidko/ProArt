@@ -1,0 +1,234 @@
+:root {
+    --main-font: 'Nunito Sans', sans-serif;
+    --main-color-1: #000;
+    --main-color-2: #fff;
+    --main-color-3: #E60B0B;
+    --main-color-4: #448CFB;
+    --main-color-5: #FCBC05;
+    --main-color-6: #636363;
+}
+
+html,
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-left {
+    background-image: url(/img/main-mob.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 536px;
+    height: 894px;
+    padding-top: 30px;
+}
+
+.header-logo a {
+    margin: 0 125px 0 85px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 22px;
+    color: var(--main-color-3);
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+.main-right {
+    width: 50%;
+}
+
+.right-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.right-header-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: var(--main-color-1);
+    margin: 80px 0 10px;
+}
+
+.right-header-subtitle {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--main-color-6);
+    margin: 0;
+}
+
+
+/* ----LOGIN---- */
+
+.center {
+    padding: 70px 0;
+    width: 400px;
+    z-index: 9999;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 1px solid #E4E4EA;
+    margin: 30px 0;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-color-1);
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--main-color-1);
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--main-color-3);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+    top: -5px;
+    color: var(--main-color-3);
+}
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
+    width: 100%;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: var(--main-color-1);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pass:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    outline: none;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--main-color-2);
+    background: var(--main-color-3);
+    border-radius: 20px;
+    border: 2px solid var(--main-color-3);
+    outline: none;
+    text-decoration: none;
+    padding: 12px 93px;
+    margin-top: 52px;
+    cursor: pointer;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+input[type="submit"]:hover {
+    background: transparent;
+    color: var(--main-color-3);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.tab {
+    overflow: hidden;
+    background: rgba(118, 118, 128, 0.12);
+    width: 400px;
+    border-radius: 8.91px;
+    margin: 60px 0 0;
+}
+
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 9px;
+    background: rgba(118, 118, 128, 0.12);
+    color: var(--main-color-1);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    width: 50%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.tab button.active {
+    background: var(--main-color-3);
+    border-radius: 8.91px;
+    z-index: 1;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--main-color-2);
+}
+
+.tabcontent {
+    display: none;
+    border: none;
+    border-top: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}

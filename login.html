@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПроАрт</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="shortcut icon" href="img/icon.svg">
+
+</head>
+
+<body>
+
+
+
+    <section class="main login">
+        <div class="main-left">
+            <div class="header-logo">
+                <a href="index.html">ПроАрт</a>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="right-header">
+                <div class="right-header__text">
+                    <h1 class="right-header-title">Вход в аккаунт</h1>
+                    <p class="right-header-subtitle">Привет, уже есть аккаунт?</p>
+                </div>
+                <div class="right-header__lang">
+                    <ul class="page-langs">
+                        <li class="page-langs-item">
+                            <a href="#">RU</a>
+                        </li>
+                        <li class="page-langs-item">
+                            <a a href="#">EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wrapper">
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Email')" id="defaultOpen">Email</button>
+                    <button class="tablinks" onclick="openTab(event, 'Phone')">Номер телефона</button>
+                </div>
+
+                <div id="Email" class="tabcontent">
+                    <div class="center">
+                        <form method="post">
+                            <div class="txt_field">
+                                <input type="text" required>
+                                <span></span>
+                                <label>Email</label>
+                            </div>
+                            <div class="txt_field">
+                                <input type="password" required>
+                                <span></span>
+                                <label>Пароль</label>
+                            </div>
+                            <div class="pass">Забыли пароль?</div>
+                            <input type="submit" value="Войти">
+
+                        </form>
+                    </div>
+                </div>
+
+                <div id="Phone" class="tabcontent">
+                    <div class="center">
+                        <form method="post">
+                            <div class="txt_field">
+                                <input type="tel" required>
+                                <span></span>
+                                <label>Номер телефона</label>
+                            </div>
+
+                            <input type="submit" value="Войти">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="js/loginTab.js"></script>
+</body>
+
+</html>
