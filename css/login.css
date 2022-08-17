@@ -44,8 +44,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 536px;
-    height: 894px;
-    margin-top: -60px;
+    height: 100vh;
+    background-position: 0% 40%;
 }
 
 .right-header {
@@ -53,8 +53,58 @@ body {
     justify-content: space-around;
 }
 
-.page-langs {
-    margin-top: 20px;
+.lang_btn {
+    padding: 2px 5px 2px 25px;
+    cursor: pointer;
+    padding-left: 25px;
+    width: 40px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--main-color-1);
+}
+
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-color-2);
+    width: 90px;
+}
+
+.lang_btn::after {
+    background: rgba(0, 0, 0, 0) url("/img/dropdown.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+}
+
+.dropdown-content a {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--main-color-1);
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.lang-dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .right-header-title {
@@ -84,7 +134,7 @@ body {
     z-index: 9999;
 }
 
-form .txt_field {
+form .txt-field {
     position: relative;
     border-bottom: 1px solid #E4E4EA;
     margin: 30px 0;
@@ -95,7 +145,7 @@ form .txt_field {
     color: var(--main-color-1);
 }
 
-.txt_field input {
+.txt-field input {
     width: 100%;
     padding: 0 5px;
     height: 40px;
@@ -104,7 +154,7 @@ form .txt_field {
     outline: none;
 }
 
-.txt_field label {
+.txt-field label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -118,7 +168,7 @@ form .txt_field {
     -o-transition: .5s;
 }
 
-.txt_field span::before {
+.txt-field span::before {
     content: '';
     position: absolute;
     top: 40px;
@@ -133,14 +183,14 @@ form .txt_field {
     -o-transition: .5s;
 }
 
-.txt_field input:focus~label,
-.txt_field input:valid~label {
+.txt-field input:focus~label,
+.txt-field input:valid~label {
     top: -5px;
     color: var(--main-color-3);
 }
 
-.txt_field input:focus~span::before,
-.txt_field input:valid~span::before {
+.txt-field input:focus~span::before,
+.txt-field input:valid~span::before {
     width: 100%;
 }
 
