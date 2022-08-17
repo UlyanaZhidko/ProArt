@@ -194,6 +194,24 @@ form .txt-field {
     width: 100%;
 }
 
+.password {
+    position: relative;
+}
+
+.password-control {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(/img/open_pass.svg) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(/img/close_pass.svg) 0 0 no-repeat;
+}
+
 .pass {
     margin: -5px 0 20px 5px;
     color: var(--main-color-1);
