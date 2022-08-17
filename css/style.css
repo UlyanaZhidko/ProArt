@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-    background-image: url(/img/MAIN.png);
+    background-image: url(../img/MAIN.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 1200px;
@@ -434,7 +434,7 @@ body {
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    background-image: url(/img/triangle.svg);
+    background-image: url(../img/triangle.svg);
     background-repeat: no-repeat;
     background-position: 107% 146%;
 }
@@ -791,7 +791,7 @@ body {
         margin: 0 auto;
     }
     .header {
-        background-image: url(/img/main-mob.png);
+        background-image: url(../img/main-mob.png);
         height: 690px;
     }
     .header-menu {

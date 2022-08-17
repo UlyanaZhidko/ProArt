@@ -36,11 +36,13 @@ body {
 }
 
 .main-right {
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-photo {
-    background-image: url(/img/main-mob.png);
+    background-image: url(../img/main-mob.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 536px;
@@ -53,7 +55,7 @@ body {
     justify-content: space-around;
 }
 
-.lang_btn {
+#lang option {
     padding: 2px 5px 2px 25px;
     cursor: pointer;
     padding-left: 25px;
@@ -65,21 +67,17 @@ body {
     color: var(--main-color-1);
 }
 
+.change-lang {
+    border: none;
+    outline: none;
+}
+
 .lang-dropdown {
-    position: relative;
-    display: inline-block;
     margin-top: 30px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--main-color-2);
-    width: 90px;
-}
-
 .lang_btn::after {
-    background: rgba(0, 0, 0, 0) url("/img/dropdown.png") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("../img/dropdown.png") no-repeat scroll center center;
     content: "";
     height: 16px;
     position: absolute;
@@ -113,23 +111,24 @@ body {
     font-size: 30px;
     line-height: 41px;
     color: var(--main-color-1);
-    margin: 80px 0 10px;
+    margin: 80px 0 0;
 }
 
 .right-header-subtitle {
     font-family: var(--main-font);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 27px;
     color: var(--main-color-6);
     margin: 0;
+    text-align: center
 }
 
 
 /* ----LOGIN---- */
 
 .center {
-    padding: 70px 0;
+    padding: 40px 0;
     width: 400px;
     z-index: 9999;
 }
@@ -205,16 +204,16 @@ form .txt-field {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url(/img/open_pass.svg) 0 0 no-repeat;
+    background: url(../img/open_pass.svg) 0 0 no-repeat;
 }
 
 .password-control.view {
-    background: url(/img/close_pass.svg) 0 0 no-repeat;
+    background: url(../img/close_pass.svg) 0 0 no-repeat;
 }
 
 .pass {
     margin: -5px 0 20px 5px;
-    color: var(--main-color-1);
+    color: var(--main-color-6);
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
@@ -239,7 +238,7 @@ input[type="submit"] {
     outline: none;
     text-decoration: none;
     padding: 12px 93px;
-    margin-top: 52px;
+    margin-top: 20px;
     cursor: pointer;
     transition: 0.6s;
     -webkit-transition: 0.6s;
@@ -263,7 +262,7 @@ input[type="submit"]:hover {
     background: rgba(118, 118, 128, 0.12);
     width: 400px;
     border-radius: 8.91px;
-    margin: 60px 0 0;
+    margin: 40px 0 0;
 }
 
 .tab button {
@@ -306,4 +305,74 @@ input[type="submit"]:hover {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+}
+
+
+/* with Google */
+
+.google-btn {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--main-color-1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.login-with {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-with-subtitle {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--main-color-6);
+    margin: 0;
+}
+
+.login-with-subtitle:before,
+.login-with-subtitle:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 1px;
+    background-color: var(--main-color-6);
+    position: relative;
+}
+
+.login-with-subtitle:before {
+    left: -20px;
+}
+
+.login-with-subtitle:after {
+    right: -20px;
+}
+
+
+/* change page */
+
+.change_text {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--main-color-6);
+    margin: 40px 0 0;
+}
+
+.change_link {
+    font-weight: 600;
+    color: var(--main-color-3);
+    text-decoration: none;
+}
+
+.change_link:hover {
+    text-decoration: underline;
 }
