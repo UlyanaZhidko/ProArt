@@ -20,13 +20,8 @@ body {
     justify-content: space-between;
 }
 
-.main-left {
-    background-image: url(/img/main-mob.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 536px;
-    height: 894px;
-    padding-top: 30px;
+.header-logo {
+    margin-top: 30px;
 }
 
 .header-logo a {
@@ -38,16 +33,28 @@ body {
     color: var(--main-color-3);
     text-decoration: none;
     cursor: pointer;
-    padding-top: 20px;
 }
 
 .main-right {
-    width: 50%;
+    width: 35%;
+}
+
+.main-photo {
+    background-image: url(/img/main-mob.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 536px;
+    height: 894px;
+    margin-top: -60px;
 }
 
 .right-header {
     display: flex;
     justify-content: space-around;
+}
+
+.page-langs {
+    margin-top: 20px;
 }
 
 .right-header-title {
