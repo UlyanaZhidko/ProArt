@@ -70,6 +70,7 @@ body {
 .change-lang {
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .lang-dropdown {
@@ -218,6 +219,7 @@ form .txt-field {
     font-weight: 400;
     font-size: 14px;
     cursor: pointer;
+    text-align: right;
 }
 
 .pass:hover {
@@ -375,4 +377,67 @@ input[type="submit"]:hover {
 
 .change_link:hover {
     text-decoration: underline;
+}
+
+
+/* -------------------MEDIA------------------- */
+
+@media(max-width: 900px) {
+    .main {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .main-photo {
+        display: none;
+    }
+    .right-header-title {
+        font-size: 20px;
+        line-height: 27px;
+        margin: 50px 0 0;
+    }
+    .right-header-subtitle {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .tab {
+        width: 100%;
+        margin: 40px auto 0;
+    }
+    .tab button.active,
+    .tab button {
+        font-size: 13px;
+        padding: 6px;
+    }
+    .center {
+        padding: 0 0 40px;
+        width: 300px;
+    }
+    form .txt-field {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .login-with-subtitle {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .google-btn {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .google-btn img {
+        width: 30px;
+    }
+    .change_text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .main-right {
+        order: 2;
+        width: 100%;
+    }
+    .header-logo a {
+        font-size: 16px;
+        margin: 20px;
+    }
 }
