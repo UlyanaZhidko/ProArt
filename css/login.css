@@ -392,6 +392,9 @@ input[type="submit"]:hover {
     .main-photo {
         display: none;
     }
+    .right-header__text {
+        text-align: center;
+    }
     .right-header-title {
         font-size: 20px;
         line-height: 27px;
