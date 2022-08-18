@@ -71,6 +71,7 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    background: transparent;
 }
 
 .lang-dropdown {
