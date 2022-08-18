@@ -88,25 +88,6 @@ body {
     width: 16px;
 }
 
-.dropdown-content a {
-    font-family: var(--main-font);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 27px;
-    color: var(--main-color-1);
-    padding: 2px 0 2px 25px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1
-}
-
-.lang-dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .right-header-title {
     font-family: var(--main-font);
     font-weight: 700;

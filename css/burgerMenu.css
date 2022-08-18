@@ -1,0 +1,199 @@
+:root {
+    --main-font: 'Nunito Sans', sans-serif;
+    --main-color-1: #000;
+    --main-color-2: #fff;
+    --main-color-3: #E60B0B;
+    --main-color-4: #448CFB;
+    --main-color-5: #FCBC05;
+}
+
+.burger-menu_button {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 9995;
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: none;
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--main-color-2);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.burger-menu_lines::before {
+    content: '';
+    top: -8px;
+}
+
+.burger-menu_lines::after {
+    content: '';
+    top: 8px;
+}
+
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+}
+
+.burger-menu_active .burger-menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu_lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 230px;
+    background-color: var(--main-color-5);
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_link {
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-color-1);
+    border-bottom: 1px solid var(--main-color-2);
+}
+
+.burger-menu_logo a {
+    font-size: 20px;
+    margin: 25px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--main-color-2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.burger-menu_logo {
+    margin-bottom: 50px;
+}
+
+.burger-menu_link:first-child {
+    border-top: 1px solid var(--main-color-2);
+}
+
+.burger-menu_link:hover {
+    filter: brightness(0.9);
+    -webkit-filter: brightness(0.9);
+}
+
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#lang option {
+    padding: 2px 5px 2px 25px;
+    cursor: pointer;
+    padding-left: 25px;
+    width: 40px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--main-color-1);
+    background: transparent;
+}
+
+.change-lang {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.lang-dropdown {
+    margin: 70px auto 0;
+}
+
+.lang_btn::after {
+    background: rgba(0, 0, 0, 0) url("../img/dropdown.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+}
+
+@media(max-width: 600px) {
+    .burger-menu_button {
+        display: inline-block !important;
+    }
+}
