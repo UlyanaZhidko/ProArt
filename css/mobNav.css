@@ -14,6 +14,7 @@
     left: 0;
     width: 100%;
     display: none;
+    z-index: 999;
 }
 
 .mob-nav ul {
