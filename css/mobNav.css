@@ -1,0 +1,61 @@
+:root {
+    --main-font: 'Nunito Sans', sans-serif;
+    --main-color-1: #000;
+    --main-color-2: #fff;
+    --main-color-3: #E60B0B;
+    --main-color-4: #448CFB;
+    --main-color-5: #FCBC05;
+    --main-color-6: #636363;
+}
+
+.mob-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.mob-nav ul {
+    background-color: var(--main-color-2);
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 60px;
+}
+
+.mob-nav ul li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.mob-nav .active-icon a,
+.mob-nav .active-icon p {
+    color: var(--main-color-3);
+    fill: var(--main-color-3);
+    font-weight: 700;
+}
+
+.mob-nav p {
+    margin: 2px 0;
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: var(--main-color-6);
+}
+
+.nav-icon {
+    fill: var(--main-color-6);
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .mob-nav {
+        display: inline-block !important;
+    }
+}
