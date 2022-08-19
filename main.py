@@ -61,14 +61,12 @@ def send_message():
     if password != confirm_password:
         return "Passwords not match"
     key = pass_to_hash_func(password)
-
     mydict = {
         "username": username,
         "email": email,
         "storage": key
     }
     my_collection.insert_one(mydict)
-
     return "ok"
 
 
