@@ -28,8 +28,12 @@ def check_pass_func(storage, password):
 
 def db():
     load_dotenv()
-    user = os.environ["$MONGODB_USER"]
-    password = os.environ["$MONGODB_PASSWORD"]
+    if '/' in os.getcwd():
+        user = os.environ["$MONGODB_USER"]
+        password = os.environ["$MONGODB_PASSWORD"]
+    else:
+        user = os.environ["MONGODB_USER"]
+        password = os.environ["MONGODB_PASSWORD"]
     connect = f"mongodb+srv://{user}:{password}@cluster0.zuefcwj.mongodb.net/?retryWrites=true&w=majority"
     return pymongo.MongoClient(connect)
 
