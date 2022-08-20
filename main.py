@@ -2,6 +2,7 @@ import pymongo
 import re
 import os
 import hashlib
+from dotenv import load_dotenv
 from flask import Flask, request, render_template
 
 # app = Flask(__name__)
@@ -26,7 +27,10 @@ def check_pass_func(storage, password):
 
 
 def db():
-    connect = "mongodb+srv://<user>:<password>@cluster0.zuefcwj.mongodb.net/?retryWrites=true&w=majority"
+    load_dotenv()
+    user = os.environ["$MONGODB_USER"]
+    password = os.environ["$MONGODB_PASSWORD"]
+    connect = f"mongodb+srv://{user}:{password}@cluster0.zuefcwj.mongodb.net/?retryWrites=true&w=majority"
     return pymongo.MongoClient(connect)
 
 
