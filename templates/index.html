@@ -12,10 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobNav.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobNav.css') }}">
 
-    <link rel="shortcut icon" href="img/icon.svg">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.svg') }}">
 
 </head>
 
@@ -85,7 +85,7 @@
             </div>
 
             <div class="header-title">
-                <img class="header-logo-img" src="img/main-text.svg" alt="Искусство это интересно">
+                <img class="header-logo-img" src="{{ url_for('static', filename='img/main-text.svg') }}" alt="Искусство это интересно">
                 <a class="btn-long" href="#download">Скачать приложение</a>
             </div>
         </div>
@@ -105,7 +105,7 @@
             <div class="advantage__block">
                 <div class="advantage__card">
                     <div class="advantage__card-square effective">
-                        <img class="advantage__card-icon" src="img/card-icon/effective.svg" alt="иконка">
+                        <img class="advantage__card-icon" src="{{ url_for('static', filename='img/card-icon/effective.svg') }}" alt="иконка">
                     </div>
 
                     <div class="advantage__card-text">
@@ -116,7 +116,7 @@
 
                 <div class="advantage__card">
                     <div class="advantage__card-square cool">
-                        <img class="advantage__card-icon" src="img/card-icon/cool.svg" alt="иконка">
+                        <img class="advantage__card-icon" src="{{ url_for('static', filename='img/card-icon/cool.svg') }}" alt="иконка">
                     </div>
 
                     <div class="advantage__card-text">
@@ -127,7 +127,7 @@
 
                 <div class="advantage__card">
                     <div class="advantage__card-square interesting">
-                        <img class="advantage__card-icon" src="img/card-icon/intresting.svg" alt="иконка">
+                        <img class="advantage__card-icon" src="{{ url_for('static', filename='img/card-icon/intresting.svg') }}" alt="иконка">
                     </div>
 
                     <div class="advantage__card-text">
@@ -138,7 +138,7 @@
 
                 <div class="advantage__card">
                     <div class="advantage__card-square no-boring">
-                        <img class="advantage__card-icon" src="img/card-icon/no_boring.svg" alt="иконка">
+                        <img class="advantage__card-icon" src="{{ url_for('static', filename='img/card-icon/no_boring.svg') }}" alt="иконка">
                     </div>
 
                     <div class="advantage__card-text">
@@ -162,7 +162,7 @@
             </div>
         </div>
         <div class="courses-banner__block-img">
-            <img class="courses-banner__img" src="img/courses.png" alt="скрин экрана телефона">
+            <img class="courses-banner__img" src="{{ url_for('static', filename='img/courses.png') }}" alt="скрин экрана телефона">
         </div>
     </section>
 
@@ -177,12 +177,12 @@
         </div>
 
         <div class="download__block" id="download">
-            <img class="download__block-img" src="img/download_img.png" alt="картинка">
+            <img class="download__block-img" src="{{ url_for('static', filename='img/download_img.png') }}" alt="картинка">
 
             <div class="download__block__buttons">
                 <div class="download__block__item download-google">
                     <a class="download__block__link" href="#">
-                        <img class="download__block__link-img" src="img/google-play.svg" alt="иконка google-play">
+                        <img class="download__block__link-img" src="{{ url_for('static', filename='img/google-play.svg') }}" alt="иконка google-play">
                         <p class="download__block__link-text">Доступно в Google Play</p>
                     </a>
                 </div>
@@ -190,7 +190,7 @@
                 <div class="circle-img"></div>
                 <div class="download__block__item download-apple">
                     <a class="download__block__link" href="#">
-                        <img class="download__block__link-img" src="img/apple.svg" alt="иконка apple">
+                        <img class="download__block__link-img" src="{{ url_for('static', filename='img/apple.svg') }}" alt="иконка apple">
                         <p class="download__block__link-text">Скачать в App Store</p>
                     </a>
                 </div>
@@ -209,13 +209,13 @@
 
                 <div class="reviews-right">
                     <div class="reviews-right__block">
-                        <img class="reviews-right__img" src="img/quote.svg" alt="кавычки">
+                        <img class="reviews-right__img" src="{{ url_for('static', filename='img/quote.svg') }}" alt="кавычки">
                         <div class="reviews-right__text">
                             <p class="reviews-right__desc main-desc">
                                 Отличные курсы, лучшие из всех, что я когда-либо проходил. С <b>ПроАрт</b> я познакомился в университете, где онлайн-задания довольно успешно внедрялись преподавателями в учебный план.
                             </p>
                             <div class="reviews-right__author">
-                                <img class="reviews-right__avatar" src="img/review-1.jpg" alt="фото пользователя">
+                                <img class="reviews-right__avatar" src="{{ url_for('static', filename='img/review-1.jpg') }}" alt="фото пользователя">
                                 <span class="author-name main-desc">— Колов Николай</span>
                             </div>
                         </div>
@@ -232,13 +232,13 @@
 
                 <div class="reviews-right">
                     <div class="reviews-right__block">
-                        <img class="reviews-right__img" src="img/quote.svg" alt="кавычки">
+                        <img class="reviews-right__img" src="{{ url_for('static', filename='img/quote.svg') }}" alt="кавычки">
                         <div class="reviews-right__text">
                             <p class="reviews-right__desc main-desc">
                                 Очень удобно и интересно проходить уроки. В любое удобное время можно зайти и продолжить изучения. Очень понравился курс "Супрематизм"
                             </p>
                             <div class="reviews-right__author">
-                                <img class="reviews-right__avatar" src="img/review-2.jpg" alt="фото пользователя">
+                                <img class="reviews-right__avatar" src="{{ url_for('static', filename='img/review-2.jpg') }}" alt="фото пользователя">
                                 <span class="author-name main-desc">— Ольга Муровва</span>
                             </div>
                         </div>
@@ -255,7 +255,7 @@
 
     <section class="lessons-banner">
         <div class="lessons-banner__block-img">
-            <img class="lessons-banner__img" src="img/lessons.png" alt="скрин экрана телефона">
+            <img class="lessons-banner__img" src="{{ url_for('static', filename='img/lessons.png') }}" alt="скрин экрана телефона">
         </div>
 
         <div class="lessons-banner__block">
@@ -314,11 +314,11 @@
 
             <div class="footer__item">
                 <div class="footer-social">
-                    <a href="#" class="social-link"><img src="img/footer-icon/youtube.svg" alt="иконка youtube"></a>
-                    <a href="#" class="social-link"><img src="img/footer-icon/facebook.svg" alt="иконка facebook"></a>
-                    <a href="#" class="social-link"><img src="img/footer-icon/linkedin.svg" alt="иконка linkedin"></a>
-                    <a href="#" class="social-link"><img src="img/footer-icon/twitter.svg" alt="иконка twitter"></a>
-                    <a href="#" class="social-link"><img src="img/footer-icon/instagram.svg" alt="иконка instagram"></a>
+                    <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/footer-icon/youtube.svg') }}" alt="иконка youtube"></a>
+                    <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/footer-icon/facebook.svg') }}" alt="иконка facebook"></a>
+                    <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/footer-icon/linkedin.svg') }}" alt="иконка linkedin"></a>
+                    <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/footer-icon/twitter.svg') }}" alt="иконка twitter"></a>
+                    <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/footer-icon/instagram.svg') }}" alt="иконка instagram"></a>
                 </div>
             </div>
         </div>
@@ -330,7 +330,7 @@
     </section>
 
 
-    <script src="js/reviewSlider.js"></script>
+    <script src="{{ url_for('static', filename='js/reviewSlider.js') }}"></script>
 </body>
 
 </html>

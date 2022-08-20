@@ -3,9 +3,9 @@ import re
 import os
 import hashlib
 from dotenv import load_dotenv
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 
 def pass_to_hash_func(password):
@@ -45,8 +45,27 @@ function registration() {
 '''
 
 
-# @app.route("/send_message")
+@app.errorhandler(404)
+def page_not_found(error):
+    return redirect(url_for('index'))
 
+
+@app.route("/index.html")
+def index():
+    return render_template("/index.html")
+
+
+@app.route("/login.html")
+def login():
+    return render_template("/login.html")
+
+
+@app.route("/registration.html")
+def registration():
+    return render_template("/registration.html")
+
+
+# @app.route("/send_message")
 def send_message():
     username = "ulyaa"  # request.args["username"]
     email = "vad.podvoyskiy@gmail.com"  # request.args["email"]
@@ -57,7 +76,6 @@ def send_message():
     else:
         return "Email address is incorrect"
     for row in my_collection.find({}, {"_id": 1, "username": 1, "email": 1, "storage": 1}):
-        print(check_pass_func(row["storage"], password))
         if row["username"] == username:
             return "This username already exist."
         elif row["email"] == email:
@@ -77,4 +95,4 @@ def send_message():
 client = db()
 database = client["ProArt"]
 my_collection = database["Users"]
-print(send_message())
+app.run(host="0.0.0.0", port=80)
