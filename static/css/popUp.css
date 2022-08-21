@@ -9,7 +9,7 @@
 }
 
 
-/* popUp registr code */
+/* popUp otc */
 
 .otc-modal {
     display: none;
@@ -28,7 +28,7 @@
     background-color: var(--main-color-2);
     margin: auto;
     width: 60%;
-    height: 50%;
+    height: 350px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -90,20 +90,6 @@
 
 .otc-modal-body {
     padding: 2px 16px;
-}
-
-.otc label {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
 }
 
 .otc fieldset {
