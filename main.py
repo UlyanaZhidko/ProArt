@@ -69,6 +69,11 @@ def registration():
     return render_template("/registration.html")
 
 
+@app.route("/catalog.html")
+def catalog():
+    return render_template("/catalog.html")
+
+
 # @app.route("/send_message")
 def send_message():
     username = "ulyaa"  # request.args["username"]
