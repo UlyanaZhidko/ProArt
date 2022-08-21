@@ -14,13 +14,11 @@
 
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.svg') }}">
 
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/popUp.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
 
 </head>
@@ -74,7 +72,7 @@
                                 <label>Повторите пароль</label>
                             </div>
 
-                            <input type="submit" value="Регистрация" onclick="registration_js();">
+                            <input type="submit" value="Регистрация" id="otcBtn" onclick="registration_js();">
                         </form>
                     </div>
                 </div>
@@ -115,6 +113,50 @@
         <div class="main-photo"> </div>
 
     </section>
+
+
+
+
+    <!-- PopUp otc -->
+
+    <div id="otcModal" class="otc-modal">
+        <div class="otc-modal-content">
+            <div class="otc-modal-header">
+                <span class="close">&times;</span>
+                <h2 class="otc-modal-title">Прверка кода</h2>
+                <p class="otc-modal-text">Введите 6-ти значный код из письма на указанном вами почтовом ящике.</p>
+            </div>
+            <div class="otc-modal-body">
+                <form class="otc" name="one-time-code" action="#">
+                    <fieldset>
+
+                        <div class="code-items">
+                            <label for="otc-1">Number 1</label>
+                            <label for="otc-2">Number 2</label>
+                            <label for="otc-3">Number 3</label>
+                            <label for="otc-4">Number 4</label>
+                            <label for="otc-5">Number 5</label>
+                            <label for="otc-6">Number 6</label>
+                        </div>
+
+                        <div class="code-input">
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" autocomplete="one-time-code" id="otc-1" required>
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" id="otc-2" required>
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" id="otc-3" required>
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" id="otc-4" required>
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" id="otc-5" required>
+                            <input type="number" pattern="[0-9]*" value="" inputtype="numeric" id="otc-6" required>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
 
     <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
