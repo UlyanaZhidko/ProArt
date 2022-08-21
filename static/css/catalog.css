@@ -133,7 +133,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 241px;
     line-height: 100px;
     text-align: center;
-    margin: 2px;
+    margin: 2px 2px 30px 2px;
     display: none;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -147,37 +147,69 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .courses-wrap {
-    margin-top: 20px;
+    margin-top: 70px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+#catalogBtn {
+    display: flex;
+}
+
 .btn {
     outline: none;
+    border: none;
     cursor: pointer;
     width: 128px;
     height: 40px;
-    border: 1px solid var(--main-color-3);
-    background-color: transparent;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    background: rgba(118, 118, 128, 0.12);
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
     line-height: 13px;
     color: var(--main-color-1);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.catalog-btn_first {
+    border-radius: 9px 0px 0px 9px;
+    -webkit-border-radius: 9px 0px 0px 9px;
+    -moz-border-radius: 9px 0px 0px 9px;
+    -ms-border-radius: 9px 0px 0px 9px;
+    -o-border-radius: 9px 0px 0px 9px;
+}
+
+.catalog-btn_last {
+    border-radius: 0px 0px 9px 0px;
+    -webkit-border-radius: 0px 9px 9px 0px;
+    -moz-border-radius: 0px 0px 9px 0px;
+    -ms-border-radius: 0px 0px 9px 0px;
+    -o-border-radius: 0px 0px 9px 0px;
 }
 
 .btn:hover {
     background-color: #ddd;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
 }
 
 .btn.active {
-    background-color: #666;
-    color: white;
+    background-color: var(--main-color-3);
+    color: var(--main-color-2);
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
 }
