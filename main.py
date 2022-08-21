@@ -38,17 +38,6 @@ def db():
     return pymongo.MongoClient(connect)
 
 
-'''
-function registration() {
-            var username = $("#username").val(); // Кладем текст из поля "name" в переменную
-            var email = $("#email").val();
-            var password = $("#password").val();
-            var confirm_password = $("#confirm_password").val();
-            $.get("/send_message", { "name" : name, "text" : text});
-        }
-'''
-
-
 @app.errorhandler(404)
 def page_not_found(error):
     return redirect(url_for('index'))
@@ -69,27 +58,26 @@ def registration():
     return render_template("/registration.html")
 
 
-@app.route("/catalog.html")
-def catalog():
-    return render_template("/catalog.html")
-
-
-# @app.route("/send_message")
-def send_message():
-    username = "ulyaa"  # request.args["username"]
-    email = "vad.podvoyskiy@gmail.com"  # request.args["email"]
-    password = "password"  # request.args["password"]
-    confirm_password = "password"  # request.args["confirm_password"]
+@app.route("/send_reg_credentials")
+def send_reg_credentials():
+    username = request.args["username"]
+    email = request.args["email"]
+    password = request.args["password"]
+    second_password = request.args["second_password"]
     if re.search("\@", email):
         pass
     else:
+        print("Email address is incorrect")
         return "Email address is incorrect"
     for row in my_collection.find({}, {"_id": 1, "username": 1, "email": 1, "storage": 1}):
         if row["username"] == username:
+            print("This username already exist.")
             return "This username already exist."
         elif row["email"] == email:
+            print("You already have account")
             return "You already have account"
-    if password != confirm_password:
+    if password != second_password:
+        print("Passwords not match")
         return "Passwords not match"
     key = pass_to_hash_func(password)
     mydict = {
@@ -98,7 +86,7 @@ def send_message():
         "storage": key
     }
     my_collection.insert_one(mydict)
-    return "ok"
+    return redirect(url_for('index'))
 
 
 client = db()

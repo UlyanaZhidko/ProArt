@@ -35,7 +35,7 @@ function show_hide_password(target) {
 
 
 function show_hide_secPassword(target) {
-    var input = document.getElementById('second-password');
+    var input = document.getElementById('second_password');
     if (input.getAttribute('type') == 'password') {
         target.classList.add('view');
         input.setAttribute('type', 'text');

@@ -14,13 +14,19 @@
 
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-    <link rel="stylesheet" href="../static/css/login.css">
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.svg') }}">
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
 
 </head>
 
 <body>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     <section class="main registration">
         <div class="header-logo">
@@ -44,14 +50,14 @@
 
                 <div id="Email" class="tabcontent">
                     <div class="center">
-                        <form method="post">
+                        <form>
                             <div class="txt-field">
-                                <input type="text" id="username" required>
+                                <input type="text" id="name" required>
                                 <span></span>
                                 <label>Имя</label>
                             </div>
                             <div class="txt-field">
-                                <input type="text" id="email" required>
+                                <input type="text" id="e_mail" required>
                                 <span></span>
                                 <label>Email</label>
                             </div>
@@ -62,14 +68,13 @@
                                 <label>Пароль</label>
                             </div>
                             <div class="txt-field password">
-                                <input type="password" id="second-password" name="pass" required>
+                                <input type="password" id="second_password" name="pass" required>
                                 <a href="#" class="password-control" onclick="return show_hide_secPassword(this);"></a>
                                 <span></span>
                                 <label>Повторите пароль</label>
                             </div>
 
-                            <input type="submit" value="Регистрация">
-
+                            <input type="submit" value="Регистрация" onclick="registration_js();">
                         </form>
                     </div>
                 </div>
@@ -111,10 +116,7 @@
 
     </section>
 
-
-
     <script src="{{ url_for('static', filename='js/login.js') }}"></script>
-    <script src="../static/js/login.js"></script>
 </body>
 
 </html>
