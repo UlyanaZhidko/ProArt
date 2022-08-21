@@ -210,7 +210,6 @@ form .txt-field {
 
 input[type="submit"] {
     width: 100%;
-    outline: none;
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 20px;

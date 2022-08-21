@@ -89,7 +89,9 @@
 }
 
 .otc-modal-body {
-    padding: 2px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .otc label {
@@ -170,6 +172,28 @@ input::-webkit-inner-spin-button {
     margin: 0 .25em;
     order: 1;
     background: var(--main-color-4);
+}
+
+#otc_check {
+    width: 35%;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--main-color-2);
+    background: var(--main-color-3);
+    border-radius: 20px;
+    border: 2px solid var(--main-color-3);
+    outline: none;
+    text-decoration: none;
+    padding: 12px 93px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
 }
 
 @media (max-width: 500px) {
