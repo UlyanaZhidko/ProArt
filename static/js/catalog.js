@@ -1,3 +1,4 @@
+// Фильтрация курсов
 filterSelection("all")
 
 function filterSelection(c) {
@@ -42,4 +43,16 @@ for (var i = 0; i < btns.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
+}
+
+
+// кнопка добавить в избранное
+
+for (var like_btn of document.getElementsByTagName('svg')) {
+
+    like_btn.onclick = function() {
+
+        this.style.fill = this.style.fill === 'red' ? 'none' : 'red';
+        this.style.stroke = this.style.stroke === 'red' ? 'black' : 'red';
+    }
 }
