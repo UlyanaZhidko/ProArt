@@ -1,24 +1,3 @@
-//Модальное окно с кодом из email
-var modal = document.getElementById("otcModal");
-var btn = document.getElementById("otcBtn");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-
 //Переключение табов форма входа
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;

@@ -13,22 +13,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.svg') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/popUp.css') }}">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-    </script>
+    </script> -->
+
+    <link rel="shortcut icon" href="../static/img/icon.svg">
+
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/popUp.css">
 
 </head>
 
 <body>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="../static/js/main.js"></script>
 
     <section class="main registration">
         <div class="header-logo">
-            <a href="index.html">ПроАрт</a>
+            <a href="../index.html">ПроАрт</a>
         </div>
 
         <div class="main-right">
@@ -42,8 +47,8 @@
             <div class="wrapper">
 
                 <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'Email')" id="defaultOpen">Email</button>
-                    <button class="tablinks" onclick="openTab(event, 'Phone')">Номер телефона</button>
+                    <button class="tablinks" onclick="openTab(event, 'email')" id="defaultOpen">Email</button>
+                    <button class="tablinks" onclick="openTab(event, 'phone')">Номер телефона</button>
                 </div>
 
                 <div id="email" class="tabcontent">
@@ -72,21 +77,21 @@
                                 <label>Повторите пароль</label>
                             </div>
 
-                            <input type="submit" value="Регистрация" id="otcBtn" onclick="registration_js();">
+                            <input type="submit" value="Регистрация" id="otcBtn_email" onclick="registration_js();">
                         </form>
                     </div>
                 </div>
 
                 <div id="phone" class="tabcontent">
                     <div class="center">
-                        <form method="post">
+                        <form>
                             <div class="txt-field">
                                 <input type="tel" required>
                                 <span></span>
                                 <label>Номер телефона</label>
                             </div>
 
-                            <input type="submit" value="Регистрация">
+                            <input type="submit" value="Регистрация" id="otcBtn_phone" onclick="registration_js();">
                         </form>
                     </div>
                 </div>
@@ -156,7 +161,8 @@
 
 
 
-    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/popUp.js"></script>
 </body>
 
 </html>

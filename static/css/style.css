@@ -181,6 +181,7 @@ body {
     outline: none;
     padding: 12px 32px;
     cursor: pointer;
+    text-decoration: none;
     background: transparent;
     margin: 34px 0;
     color: var(--main-color-3);
@@ -804,10 +805,10 @@ body {
     .header-logo a {
         font-size: 30px;
         line-height: 41px;
-        margin: 0;
     }
     .header-title {
         margin: 660px 0;
+        align-items: center;
     }
     .header-logo-img {
         height: 70px;
