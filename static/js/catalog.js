@@ -56,3 +56,30 @@ for (var like_btn of document.getElementsByTagName('svg')) {
         this.style.stroke = this.style.stroke === 'red' ? 'black' : 'red';
     }
 }
+
+
+
+
+// кнопка показать еще курсы
+window.onload = function() {
+    var box = document.getElementsByClassName('filterItem');
+    var btn_load_more = document.getElementById('load_more');
+    for (let i = 8; i < box.length; i++) {
+        box[i].style.display = "none";
+    }
+
+    var countD = 8;
+    btn_load_more.addEventListener("click", function() {
+        countD += 8;
+        if (countD <= box.length) {
+            for (let i = 0; i < countD; i++) {
+                box[i].style.display = "block";
+            }
+        }
+
+        if (countD >= box.length) {
+            btn_load_more.style.display = "none";
+        }
+
+    })
+}
