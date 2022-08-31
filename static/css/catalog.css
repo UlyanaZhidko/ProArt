@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     margin-top: -60px;
+    margin-right: 22%;
 }
 
 .catalog-nav {
@@ -24,9 +25,8 @@
 /* topnav */
 
 .topnav {
-    padding-top: 20px;
-    position: absolute;
-    right: -65px;
+    margin: 0 auto;
+    width: 0;
 }
 
 .search-form {
@@ -100,7 +100,7 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
 }
 
-.container {
+.container-block {
     width: 780px;
     margin: 0 auto;
 }
@@ -328,7 +328,6 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 338px;
     height: 675px;
     border: 1.5px solid var(--main-color-2);
-    /* box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.1); */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     margin: 0 auto;
@@ -339,7 +338,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font-family: var(--main-font);
     font-weight: 600;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 16px;
     color: var(--main-color-6);
     display: flex;
     align-items: center;
@@ -431,4 +430,88 @@ input[type="search"]::-webkit-search-cancel-button {
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
     -o-transition: 0.6s;
+}
+
+
+/* Media */
+
+@media(max-width: 1190px) {
+    .catalog-header {
+        flex-direction: column;
+    }
+    .aside-block-text {
+        display: none;
+    }
+    .aside {
+        width: auto;
+    }
+    .aside-block-img {
+        margin-right: 0;
+    }
+    .aside-block-item {
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .container-block {
+        margin-right: 50px;
+    }
+    .catalog {
+        display: flex;
+        margin: 0 auto;
+        width: 85%;
+        justify-content: center;
+    }
+    .catalog-nav {
+        flex-direction: column;
+    }
+    .topnav {
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 600px) {
+    .catalog-nav {
+        padding-top: 0;
+    }
+    .catalog-header {
+        flex-direction: column;
+    }
+    .header-menu {
+        display: none;
+    }
+    .search-form {
+        width: 200px;
+    }
+    .aside {
+        display: none;
+    }
+    .catalog-header-title {
+        font-size: 25px;
+    }
+    .btn {
+        font-size: 13px;
+        width: 100px;
+        height: 30px;
+    }
+    .btn.active {
+        font-size: 13px;
+    }
+    #catalogBtn {
+        justify-content: center;
+    }
+    .filterItem {
+        margin: 0 auto 20px;
+    }
+    .catalog-header__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .catalog {
+        margin-top: 0;
+    }
+    .container-block {
+        margin-right: 0;
+    }
 }
