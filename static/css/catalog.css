@@ -450,10 +450,11 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .aside-block-item {
         justify-content: center;
-        padding: 0 20px;
+        padding: 0 30px 0 0;
     }
     .container-block {
         margin-right: 50px;
+        margin-top: 20px;
     }
     .catalog {
         display: flex;
@@ -488,9 +489,9 @@ input[type="search"]::-webkit-search-cancel-button {
     .search-form {
         width: 200px;
     }
-    .aside {
+    /* .aside {
         display: none;
-    }
+    } */
     .catalog-header-title {
         font-size: 25px;
     }
@@ -519,5 +520,27 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .container-block {
         margin-right: 0;
+        width: auto;
+    }
+    /* scrollbar */
+     ::-webkit-scrollbar {
+        display: none;
+    }
+    .catalog {
+        flex-direction: column-reverse;
+    }
+    .aside {
+        height: auto;
+        width: 85%;
+    }
+    .aside-block {
+        overflow: hidden;
+    }
+    .aside-block-title {
+        justify-content: center;
+    }
+    .aside-block-wrap {
+        display: flex;
+        overflow-x: scroll;
     }
 }
