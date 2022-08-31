@@ -562,7 +562,7 @@ body {
 
 .promo-widget__desc {
     max-width: 430px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 
@@ -975,5 +975,8 @@ body {
     }
     .promo-widget {
         margin: 0 auto 20px;
+    }
+    .promo-widget__desc {
+        margin: 0 auto 25px;
     }
 }
