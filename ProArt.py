@@ -5,25 +5,8 @@ import hashlib
 from dotenv import load_dotenv
 from flask import Flask, request, render_template, redirect, url_for
 
+
 app = Flask(__name__)
-
-
-def pass_to_hash_func(password):
-    salt = os.urandom(16)
-    key = hashlib.pbkdf2_hmac('sha256', f'{password}'.encode('utf-8'), salt, 100000, dklen=68)
-    storage = salt + key
-    print(key, salt, storage)
-    return storage
-
-
-def check_pass_func(storage, password):
-    salt_from_storage = storage[:16]
-    key_from_storage = storage[16:]
-    key = hashlib.pbkdf2_hmac('sha256', f'{password}'.encode('utf-8'), salt_from_storage, 100000, dklen=68)
-    if key == key_from_storage:
-        return True
-    else:
-        return False
 
 
 def db():
@@ -38,24 +21,46 @@ def db():
     return pymongo.MongoClient(connect)
 
 
+def pass_to_hash_func(password):
+    salt = os.urandom(16)
+    key = hashlib.pbkdf2_hmac('sha256', f'{password}'.encode('utf-8'), salt, 100000, dklen=68)
+    storage = salt + key
+    return storage
+
+
+def check_pass_func(storage, password):
+    salt_from_storage = storage[:16]
+    key_from_storage = storage[16:]
+    key = hashlib.pbkdf2_hmac('sha256', f'{password}'.encode('utf-8'), salt_from_storage, 100000, dklen=68)
+    if key == key_from_storage:
+        return True
+    else:
+        return False
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return redirect(url_for('index'))
 
 
-@app.route("/index.html")
+@app.route("/index")
 def index():
-    return render_template("/index.html")
+    return render_template("index.html")
 
 
-@app.route("/login.html")
+@app.route("/catalog")
+def catalog():
+    return render_template("catalog.html")
+
+
+@app.route("/login")
 def login():
-    return render_template("/login.html")
+    return render_template("login.html")
 
 
-@app.route("/registration.html")
+@app.route("/registration")
 def registration():
-    return render_template("/registration.html")
+    return render_template("registration.html")
 
 
 @app.route("/send_reg_credentials")
@@ -86,7 +91,7 @@ def send_reg_credentials():
         "storage": key
     }
     my_collection.insert_one(mydict)
-    return redirect(url_for('index'))
+    return "ok"
 
 
 client = db()
